@@ -3,9 +3,9 @@
 > [!TIP]
 > **Cómo leer esta guía.** Cada paso tiene siempre tres bloques:
 >
-> 🎯 **Ahora vamos a…** lo que se hace
-> 📚 **Para esto hay que saber…** los conceptos, en simple
-> ✅ **Lo que salió** el resultado
+> - 🎯 **Ahora vamos a…** lo que se hace
+> - 📚 **Para esto hay que saber…** los conceptos, en simple
+> - ✅ **Lo que salió** el resultado
 >
 > No explico lo que ya se maneja en riesgo de crédito (logística, LightGBM, AUC, KS, PD). Las palabras nuevas están en el [glosario](glosario.md).
 
@@ -209,14 +209,14 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    m0["Mes 0"] --- m1["1"] --- m2["2"] --- m3["3"] --- m4["4"] --- m5["5"] --- m6["6"] --- m7["7"]
+    A["🔵 ENTRENAR<br/>meses 0 a 5<br/>el pasado"] -- "el modelo nunca ve<br/>estos meses" --> B["🟠 PROBAR<br/>meses 6 y 7<br/>el futuro"]
     classDef train fill:#2a78d6,color:#fff,stroke:#2a78d6
     classDef test fill:#eb6834,color:#fff,stroke:#eb6834
-    class m0,m1,m2,m3,m4,m5 train
-    class m6,m7 test
+    class A train
+    class B test
 ```
 
-🔵 Entrenar con los meses 0–5 · 🟠 Probar con 6–7. El modelo se usa en el futuro, así que se evalúa en el futuro. En fraude importa todavía más porque el estafador cambia: en BAF el fraude sube de **0,9%** (mes 2) a **1,5%** (mes 7).
+El modelo se usa en el futuro, así que se evalúa en el futuro. En fraude importa todavía más porque el estafador cambia: en BAF el fraude sube de **0,9%** (mes 2) a **1,5%** (mes 7).
 
 #### ④ La métrica: recall con 5% de falsos positivos
 

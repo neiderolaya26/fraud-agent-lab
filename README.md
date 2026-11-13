@@ -4,6 +4,7 @@
 
 - **Fecha de inicio:** 2026-11-13
 - **Estado:** En curso (modo guiado: Neider decide y escribe las decisiones; Claude arma el esqueleto y explica)
+- **¿Nuevo en fraude?** Empieza por la [guía paso a paso](docs/guia.md) y el [glosario](docs/glosario.md).
 
 ## Pregunta de negocio (decisión 001)
 

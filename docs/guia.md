@@ -51,7 +51,7 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-    S1["S1 ✅ Datos"] --> E & U & R
+    S1["S1 ✅ Datos"]
     subgraph E["🚪 Entrada · BAF"]
         S2["S2 Primer modelo"] --> S3["S3 Costo y umbral"] --> S4["S4 Fairness"] --> S5["S5 Drift"] --> S6["S6 Explicar"]
     end
@@ -61,6 +61,7 @@ flowchart TB
     subgraph R["🕸️ Escondite · IBM AML"]
         S9["S9 Grafos"] --> S10["S10 Tipologías"]
     end
+    S1 --> E & U & R
     E & U & R --> S11["S11 🤖 Agente investigador"] --> S12["S12 MCP y evals"] --> S13["S13 🏁 Caso final"]
 ```
 

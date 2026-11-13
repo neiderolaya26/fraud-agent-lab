@@ -1,0 +1,18 @@
+[project]
+name = "fraud-agent-lab"
+version = "0.1.0"
+description = "Fraude de punta a punta con datos públicos: fraude de solicitud (BAF), transaccional (PaySim) y lavado en redes (IBM AML), con costo, fairness, drift y un agente investigador de alertas."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+authors = [{ name = "Neider Olaya" }]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
